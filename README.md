@@ -1,4 +1,4 @@
-Directory
+Starter Projects
 =========
 
-Multi module web application featuring SpringBoot and AngularJs
+Collection of starter projects that can be used to kickstart a new project or POC.
