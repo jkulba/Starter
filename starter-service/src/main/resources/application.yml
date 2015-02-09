@@ -1,0 +1,19 @@
+spring:
+    profiles.active: default
+    profiles: default
+
+    main:
+        show_banner: true
+
+info:
+    app:
+        name: Starter Service
+        description: Starter provides REST services
+        version: 1.0.0
+
+starter:
+    datasource:
+        url: jdbc:oracle:thin:@F1ECOMDB01P-VIP.CORP.LIFE:1521/ecomp.corp.life
+        username: buy_ro
+        password: prod2test
+        driverClassName: oracle.jdbc.driver.OracleDriver
