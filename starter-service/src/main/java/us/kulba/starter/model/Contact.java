@@ -17,10 +17,14 @@ import java.util.Date;
  * @author James Kulba, jjkulba@yahoo.com
  */
 @Entity
-@Table(name = "CONTACT")
+//@Table(name = "CONTACT")
 public class Contact extends BaseObject {
 
     private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private long id;
 
     @NotNull
     @Length(max = 50)
@@ -48,6 +52,14 @@ public class Contact extends BaseObject {
     public Contact() {
         Calendar calendar = Calendar.getInstance();
         this.setDateEntered(calendar.getTime());
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -95,11 +107,5 @@ public class Contact extends BaseObject {
     public void setDateUpdated(Date dateUpdated) {
         this.dateUpdated = dateUpdated;
     }
-
-//    @Override
-//    public String toString() {
-//        return ToStringBuilder.reflectionToString(this,
-//                ToStringStyle.MULTI_LINE_STYLE);
-//    }
 
 }

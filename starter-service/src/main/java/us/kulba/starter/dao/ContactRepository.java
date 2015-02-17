@@ -1,6 +1,6 @@
 package us.kulba.starter.dao;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import us.kulba.starter.model.Contact;
 
 /**s
@@ -8,4 +8,4 @@ import us.kulba.starter.model.Contact;
  *
  * @author James Kulba, jkulba@gmail.com
  */
-public interface ContactRepository extends CrudRepository<Contact, Long> {}
+public interface ContactRepository extends PagingAndSortingRepository<Contact, Long> {}

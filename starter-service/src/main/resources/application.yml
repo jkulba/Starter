@@ -5,6 +5,13 @@ spring:
     main:
         show_banner: true
 
+    datasource:
+        platform: hsqldb
+
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+
 info:
     app:
         name: Starter Service
@@ -13,7 +20,8 @@ info:
 
 starter:
     datasource:
-        url: jdbc:oracle:thin:@F1ECOMDB01P-VIP.CORP.LIFE:1521/ecomp.corp.life
-        username: buy_ro
-        password: prod2test
-        driverClassName: oracle.jdbc.driver.OracleDriver
+        url: jdbc:hsqldb:file:data/starterdb
+        username: sa
+        password:
+        driverClassName: org.hsqldb.jdbcDriver
+
