@@ -1,0 +1,45 @@
+# Production Configuration
+
+info:
+    app:
+        name: Starter Service
+        description: Starter provides REST services
+        version: 1.0.0
+
+spring:
+    # The name of the application
+    application.name: starter-service
+
+    # The name of the main config file, default is application
+    # config.name: application
+
+    # Profiles that should be active
+    profiles.active: prod
+    profiles: prod
+
+    # Configuration for SpringApplication setters
+    main:
+        web-environment: false
+        show-banner: true
+        log-startup-info: true
+
+    jpa:
+        database-platform: org.hibernate.dialect.HSQLDialect
+        openInView: false
+        show_sql: true
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create-drop
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+
+starter:
+    datasource:
+        url: jdbc:hsqldb:file:data/starterdb-prod
+        username: sa
+        password:
+        driverClassName: org.hsqldb.jdbcDriver
