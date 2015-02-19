@@ -29,12 +29,6 @@ public class ContactRepositoryTest {
     @Autowired
     private ContactRepository contactRepository;
 
-//    @Test
-    public void sayHello() {
-        logger.info("Hello Joe");
-    }
-
-
     @Test
     public void insert() throws Exception {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
