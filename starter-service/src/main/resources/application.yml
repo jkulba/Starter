@@ -19,7 +19,7 @@ spring:
 
     # Configuration for SpringApplication setters
     main:
-        web-environment: false
+        web-environment: true
         show-banner: true
         log-startup-info: true
 
