@@ -12,7 +12,8 @@ import java.io.IOException;
 /**
  * Application is the initial app driver.
  *
- * Special Note: In order to facilitate
+ * Special Note: In order to allow the ComponentScan to find all of the classess with the
+ * ComponentScan annotation, make sure this class is in the root classpath.
  *
  * @author James Kulba, jkulba@gmail.com
  */
