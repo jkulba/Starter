@@ -1,4 +1,4 @@
-package us.kulba.starter.dao;
+package us.kulba.starter.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import us.kulba.starter.model.Contact;

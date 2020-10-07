@@ -1,4 +1,4 @@
-package us.kulba.starter.dao;
+package us.kulba.starter.repository;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
